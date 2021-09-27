@@ -1,0 +1,25 @@
+#cityOptions {
+    list-style-type: none;
+}
+
+.allForecast ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+hr {
+    width: 90%;
+}
+
+.citySearch {
+    flex: 1 0 0;
+}
+
+.allForecast {
+    flex: 3 0 0;
+}

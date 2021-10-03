@@ -2,121 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="display-3">Weather Dashboard</h1>
-    </header>
-    <main>
+  <header>
+    <h1 class="display-3">Weather Dashboard</h1>
+  </header>
+  <main>
     <aside class="citySearch">
-        <form class="p-3">
-            <div class="form-group">
-              <label for="citySearchInput">Search for a City:</label>
-              <input type="search" class="form-control" id="citySearchInput" placeholder="San Diego">
-            </div>
-            <button type="button" class="btn btn-lg btn-primary" disabled>Search</button>
-        </form>
-        <hr>
-        <ul id="cityOptions">
-            <li><button type="button" class="btn btn-primary btn-lg">Houston</button></li>
-            <li><button type="button" class="btn btn-primary btn-lg">Chicago</button></li>
-            <li><button type="button" class="btn btn-primary btn-lg">New York</button></li>
-            <li><button type="button" class="btn btn-primary btn-lg">San Francisco</button></li>
-            <li><button type="button" class="btn btn-primary btn-lg">Denver</button></li>
-            <li><button type="button" class="btn btn-primary btn-lg">Nashville</button></li>
-            <li><button type="button" class="btn btn-primary btn-lg">Atlanta</button></li>
-        </ul>
+      <form id="citySubmit" class="p-3">
+        <div class="form-group">
+          <label for="citySearchInput">Search for a City:</label>
+          <input type="search" class="form-control" id="citySearchInput" placeholder="San Diego" required>
+        </div>
+        <button type="submit" id="citySubmitButton" class="btn btn-lg btn-primary">Search</button>
+      </form>
+      <hr>
+      <ul id="cityOptions">
+      </ul>
     </aside>
     <section class="allForecast">
-        <article class="todayForecast border border-dark p-2 m-3">
-            <h3>City (date)</h3>
-            <ul class="weatherDetails">
+      <article id="todayForecast" class=" p-2 m-3">
+        <h3 id="todayTitle"></h3>
+
+      </article>
+      <article class="weekForecast m-3">
+        <h4>5-Day Forecast:</h4>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <h5 id='dayPlus1' class="card-title"></h5>
+              <ul id='dayPlus1Details' class="card-text">
+              </ul>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 id='dayPlus2' class="card-title"></h5>
+              <ul id='dayPlus2Details' class="card-text">
+                <li>icon</li>
                 <li>Temp:</li>
                 <li>Wind:</li>
                 <li>Humidity:</li>
-                <li>UV Index:</li>
-            </ul>
-        </article>
-        <article class="weekForecast m-3">
-            <h4>5-Day Forecast:</h4>
-            <div class="card-group">
-                <div class="card" id="dayPlus1">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <ul class="card-text">
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="card" id="dayPlus2">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <ul class="card-text">
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="card" id="dayPlus3">
-                  <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <ul class="card-text">
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="card" id="dayPlus4">
-                    <div class="card-body">
-                      <h5 class="card-title"></h5>
-                      <ul class="card-text">
-                          <li>icon</li>
-                          <li>Temp:</li>
-                          <li>Wind:</li>
-                          <li>Humidity:</li>
-                      </ul>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                  <div class="card" id="dayPlus5">
-                    <div class="card-body">
-                      <h5 class="card-title"></h5>
-                      <ul class="card-text">
-                          <li>icon</li>
-                          <li>Temp:</li>
-                          <li>Wind:</li>
-                          <li>Humidity:</li>
-                      </ul>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-              </div>
-        </article>
+              </ul>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 id='dayPlus3' class="card-title"></h5>
+              <ul id='dayPlus3Details' class="card-text">
+                <li>icon</li>
+                <li>Temp:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 id="dayPlus4" class="card-title"></h5>
+              <ul id='dayPlus4Details' class="card-text">
+                <li>icon</li>
+                <li>Temp:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 id="dayPlus5" class="card-title"></h5>
+              <ul id='dayPlus5Details' class="card-text">
+                <li>icon</li>
+                <li>Temp:</li>
+                <li>Wind:</li>
+                <li>Humidity:</li>
+              </ul>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

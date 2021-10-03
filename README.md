@@ -24,3 +24,11 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
+
+## Resources
+https://getbootstrap.com/docs/5.0/forms/validation/#how-it-works
+https://stackoverflow.com/questions/5963182/how-to-remove-spaces-from-a-string-using-javascript
+https://www.w3schools.com/jquery/event_submit.asp
+https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript
+https://stackoverflow.com/questions/29516390/how-to-access-the-value-of-a-promise
+https://dmitripavlutin.com/javascript-fetch-async-await/

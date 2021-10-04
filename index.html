@@ -18,80 +18,58 @@
     <h1 class="display-3">Weather Dashboard</h1>
   </header>
   <main>
-    <aside class="citySearch">
-      <form id="citySubmit" class="p-3">
+    <aside class="citySearch m-2">
+      <form id="citySubmit" class="p-1">
         <div class="form-group">
-          <label for="citySearchInput">Search for a City:</label>
+          <label for="citySearchInput"><h2>Search for a City:</h2></label>
           <input type="search" class="form-control" id="citySearchInput" placeholder="San Diego" required>
         </div>
-        <button type="submit" id="citySubmitButton" class="btn btn-lg btn-primary">Search</button>
+        <button type="submit" id="citySubmitButton" class="btn btn-lg btn-primary btn-block">Search</button>
       </form>
       <hr>
-      <ul id="cityOptions">
-      </ul>
+      <div id="cityOptions" class="p-1">
+      </div>
     </aside>
     <section class="allForecast">
-      <article id="todayForecast" class=" p-2 m-3">
-        <h3 id="todayTitle"></h3>
-
+      <article id="todayForecast" class="p-2 m-3">
+        <h3 id="todayTitle" ></h3>
       </article>
       <article class="weekForecast m-3">
-        <h4>5-Day Forecast:</h4>
-        <div class="card-group">
+        <h4 id="5DayTitle"></h4>
+        <div class="card-group noDisplayOnLoad">
           <div class="card">
             <div class="card-body">
               <h5 id='dayPlus1' class="card-title"></h5>
               <ul id='dayPlus1Details' class="card-text">
               </ul>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 id='dayPlus2' class="card-title"></h5>
               <ul id='dayPlus2Details' class="card-text">
-                <li>icon</li>
-                <li>Temp:</li>
-                <li>Wind:</li>
-                <li>Humidity:</li>
               </ul>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 id='dayPlus3' class="card-title"></h5>
               <ul id='dayPlus3Details' class="card-text">
-                <li>icon</li>
-                <li>Temp:</li>
-                <li>Wind:</li>
-                <li>Humidity:</li>
               </ul>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 id="dayPlus4" class="card-title"></h5>
               <ul id='dayPlus4Details' class="card-text">
-                <li>icon</li>
-                <li>Temp:</li>
-                <li>Wind:</li>
-                <li>Humidity:</li>
               </ul>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h5 id="dayPlus5" class="card-title"></h5>
               <ul id='dayPlus5Details' class="card-text">
-                <li>icon</li>
-                <li>Temp:</li>
-                <li>Wind:</li>
-                <li>Humidity:</li>
               </ul>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>

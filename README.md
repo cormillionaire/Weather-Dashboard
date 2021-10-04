@@ -1,5 +1,9 @@
 # Weather-Dashboard
+![alt text](./images/weather-dashboard-pic.png)
 
+This dashboard allows the user to provide a city and returns the current weather as well as the forcast. It does not require state or country in you search. You can also come back to previously searched cities and search them again for updated weather forecasts. 
+
+https://cormillionaire.github.io/Weather-Dashboard/
 
 ## User Story
 
@@ -32,3 +36,7 @@ https://www.w3schools.com/jquery/event_submit.asp
 https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript
 https://stackoverflow.com/questions/29516390/how-to-access-the-value-of-a-promise
 https://dmitripavlutin.com/javascript-fetch-async-await/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+https://www.w3schools.com/jquery/jquery_dom_remove.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach

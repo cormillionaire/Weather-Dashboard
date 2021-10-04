@@ -2,6 +2,15 @@
     list-style-type: none;
 }
 
+header {
+    background-image: linear-gradient(to right, dodgerblue, midnightblue);
+    color: white;
+    text-align: center;
+}
+
+h1, h3, h4, h5 , label{
+    font-weight: bolder !important;
+}
 .allForecast ul {
     list-style-type: none;
     padding: 0;
@@ -13,7 +22,7 @@ main {
 }
 
 hr {
-    width: 90%;
+    width: 95%;
 }
 
 .citySearch {
@@ -22,4 +31,26 @@ hr {
 
 .allForecast {
     flex: 3 0 0;
+    min-width: 139px;
+}
+
+.noDisplayOnLoad {
+    display: none;
+
+}
+.card-group{
+    flex-wrap: wrap;
+
+}
+.card-body {
+    background: #23395d;
+    color: white;
+    margin: 5px;
+}
+.card {
+    border: none;
+}
+
+#todayTitle {
+    justify-content: space-evenly;
 }

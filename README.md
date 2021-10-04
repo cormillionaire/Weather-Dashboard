@@ -1,5 +1,5 @@
 # Weather-Dashboard
-![alt text](./images/weather-dashboard-pic.png)
+![alt text](./assets/imagesweather-dashboard-pic.png)
 
 This dashboard allows the user to provide a city and returns the current weather as well as the forcast. It does not require state or country in you search. You can also come back to previously searched cities and search them again for updated weather forecasts. 
 
